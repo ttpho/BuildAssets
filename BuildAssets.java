@@ -63,7 +63,7 @@ public class BuildAssets {
             System.out.println(GN_TOKEN_NOT_FOUND);
             return;
         }
-        final String genCode = String.format("%s\n%s%s", BUILD_GN_TOKEN_START, contentAssets, BUILD_GN_TOKEN_END);
+        final String genCode = String.format("%s\n%s  %s", BUILD_GN_TOKEN_START, contentAssets, BUILD_GN_TOKEN_END);
         final String newConentFile = matcher.replaceFirst(genCode);
         try {
             writeFileWithString(PUBSPEC_FILE_NAME, newConentFile);
