@@ -7,7 +7,7 @@ Dynamic adding assets and images into [pubspec.yaml](https://flutter.dev/docs/de
 Setup Project Flutter 
 -------
 
-1. Download and move this BuildAssets.java inito project
+1. Download and move this `BuildAssets.java` inito project
 
 2. Open file pubspec.yam  
 
