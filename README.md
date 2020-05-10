@@ -2,7 +2,7 @@ Build Assets Flutter
 =====
 Dynamic adding assets and images into [pubspec.yaml](https://flutter.dev/docs/development/ui/assets-and-images) file 
 
-<img src="/3.png" />
+<img src="/imgs/3.png" />
 
 Setup Project Flutter 
 -------
@@ -19,7 +19,7 @@ Add 2 lines
 ```
 
 below line `uses-material-design: true`
-<img src="/1.png" />
+<img src="/imgs/1.png" />
 
 3. Open terminal and run
 
@@ -28,7 +28,7 @@ below line `uses-material-design: true`
  java BuildAssets
 ```
 
-<img src="/2.png" />
+<img src="/imgs/2.png" />
 
 4. Open pubspec.yaml and enjoy
 
