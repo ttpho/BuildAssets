@@ -1,6 +1,6 @@
 Build Assets Flutter
 =====
-Dynamic adding assets and images into [pubspec.yaml](https://flutter.dev/docs/development/ui/assets-and-images) file 
+Use commnadline to add an assets section [pubspec.yaml](https://flutter.dev/docs/development/ui/assets-and-images) file, and gen code dynamic to manager all image and json files.
 
 <img src="/imgs/3.png" />
 
