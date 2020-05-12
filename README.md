@@ -37,8 +37,8 @@ Gen code
 
 | CMD  | Second Header |
 | ------------- | ------------- |
-| java BuildAssets JSON <package>.<class_name>.dart  | with command: % java BuildAssets JSON local.manager.reader_json.dart to gen file reader_json.dart into folder lib/local/manager/, the file is included static class ReaderJson</br> <img src="/imgs/5.png" /> |
-| java BuildAssets AssetImage <package>.<class_name>.dart  | with command: % java BuildAssets AssetImage local.manager.all_assets.dart to gen file all_assets.dart into folder lib/local/manager/, the file is included static class AllAssets</br> <img src="/imgs/4.png" />  |
+| java BuildAssets JSON <package>.<class_name>.dart  | with command: </br>% java BuildAssets JSON local.manager.reader_json.dart</br> to gen file reader_json.dart into folder lib/local/manager/, the file is included static class ReaderJson</br> <img src="/imgs/5.png" /> |
+| java BuildAssets AssetImage <package>.<class_name>.dart  | with command: </br>% java BuildAssets AssetImage local.manager.all_assets.dart</br> to gen file all_assets.dart into folder lib/local/manager/, the file is included static class AllAssets</br> <img src="/imgs/4.png" />  |
 
 Idea
 -------
