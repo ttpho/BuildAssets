@@ -69,14 +69,15 @@ public class BuildAssets {
             "pvrtc",
             "tga",
             "tiff",
-            "webp"
+            "webp",
+            "svg"
     };
     private static final String ARG_GEN_CODE_ASSET_IMAGE = "AssetImage";
     private static final String ARG_GEN_CODE_JSON = "JSON";
     private static final String DART_FILE = ".dart";
     private static final String TEMP_DART_FILE = "*dart";
     private static final String GEN_CODE_STATIC = "  static final %s = %s";
-    private static final String IMAGE_OBJ_FORMAT = "AssetImage('%s');";
+    private static final String IMAGE_FILE_PATH_CODE_FORMAT = "'%s';";
 
     private static final String BUILD_DART_TOKEN_START = "// === Generated Code Start ===";
     private static final String BUILD_DART_TOKEN_END = "// === Generated Code End ===";
@@ -185,8 +186,8 @@ public class BuildAssets {
             if (AssetImage.isSupportedImageFormats(filePath)) {
                 final ImageObject item = new ImageObject();
                 final String name = formatName(fileNameWithExtension);
-                final String defineAssetImage = String.format(IMAGE_OBJ_FORMAT, filePathWithoutDirectoryProject);
-                item.line = String.format(GEN_CODE_STATIC, name, defineAssetImage);
+                final String defineAssetImage = String.format(IMAGE_FILE_PATH_CODE_FORMAT, filePathWithoutDirectoryProject);
+                item.line = String.format(GEN_CODE_STATIC, name.replaceAll("-", "_"), defineAssetImage);
                 item.fileName = fileNameWithExtension;
                 imageObjects.add(item);
             } else if (JsonFile.isJsonFile(filePath)) {
@@ -409,7 +410,6 @@ public class BuildAssets {
 
             final StringWriter stringWriter = new StringWriter();
             final PrintWriter printWriter = new PrintWriter(stringWriter);
-            printWriter.println("import 'package:flutter/material.dart';");
             printWriter.println("");
             //start
             printWriter.println("class CLASS_NAME {".replace("CLASS_NAME", className));
